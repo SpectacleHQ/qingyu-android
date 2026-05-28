@@ -1,0 +1,27 @@
+*.iml
+.gradle
+/local.properties
+local.properties
+/.idea
+.DS_Store
+/build
+**/build
+/captures
+.externalNativeBuild
+.cxx
+
+# Kotlin/Android generated files
+.kotlin
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Signing and secrets
+*.jks
+*.keystore
+keystore.properties
+secrets.properties
+
+# Logs
+*.log
