@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <style name="Theme.Qingyu" parent="android:Theme.Material.Light.NoActionBar">
+    <style name="Theme.Qingyu" parent="android:Theme.Material.NoActionBar">
         <item name="android:colorAccent">@color/qingyu_primary</item>
         <item name="android:navigationBarColor">@color/qingyu_background</item>
         <item name="android:statusBarColor">@color/qingyu_background</item>
         <item name="android:windowBackground">@color/qingyu_background</item>
-        <item name="android:windowLightNavigationBar">true</item>
-        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:windowLightStatusBar">false</item>
     </style>
 </resources>

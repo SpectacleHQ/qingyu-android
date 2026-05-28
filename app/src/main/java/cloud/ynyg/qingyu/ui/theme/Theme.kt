@@ -1,6 +1,5 @@
 package cloud.ynyg.qingyu.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -11,35 +10,73 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 
+/** 深色主题配色。 */
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    primary = QingyuDarkPrimary,
+    onPrimary = QingyuDarkOnPrimary,
+    primaryContainer = QingyuDarkPrimaryContainer,
+    onPrimaryContainer = QingyuDarkOnPrimaryContainer,
+    secondary = QingyuDarkSecondary,
+    onSecondary = QingyuDarkOnSecondary,
+    secondaryContainer = QingyuDarkSecondaryContainer,
+    onSecondaryContainer = QingyuDarkOnSecondaryContainer,
+    tertiary = QingyuDarkTertiary,
+    onTertiary = QingyuDarkOnTertiary,
+    tertiaryContainer = QingyuDarkTertiaryContainer,
+    onTertiaryContainer = QingyuDarkOnTertiaryContainer,
+    background = QingyuDarkBackground,
+    onBackground = QingyuDarkOnBackground,
+    surface = QingyuDarkSurface,
+    onSurface = QingyuDarkOnBackground,
+    surfaceVariant = QingyuDarkSurfaceVariant,
+    onSurfaceVariant = QingyuDarkOnSurfaceVariant,
+    surfaceContainer = QingyuDarkSurfaceContainer,
+    outline = QingyuDarkOutline,
+    outlineVariant = QingyuDarkOutlineVariant,
+    error = QingyuDarkError,
+    onError = QingyuDarkOnError,
+    errorContainer = QingyuDarkErrorContainer,
+    onErrorContainer = QingyuDarkOnErrorContainer
 )
 
+/** 浅色主题配色。 */
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
-
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
+    primary = QingyuLightPrimary,
+    onPrimary = QingyuLightOnPrimary,
+    primaryContainer = QingyuLightPrimaryContainer,
+    onPrimaryContainer = QingyuLightOnPrimaryContainer,
+    secondary = QingyuLightSecondary,
+    onSecondary = QingyuLightOnSecondary,
+    secondaryContainer = QingyuLightSecondaryContainer,
+    onSecondaryContainer = QingyuLightOnSecondaryContainer,
+    tertiary = QingyuLightTertiary,
+    onTertiary = QingyuLightOnTertiary,
+    tertiaryContainer = QingyuLightTertiaryContainer,
+    onTertiaryContainer = QingyuLightOnTertiaryContainer,
+    background = QingyuLightBackground,
+    onBackground = QingyuLightOnBackground,
+    surface = QingyuLightSurface,
+    onSurface = QingyuLightOnBackground,
+    surfaceVariant = QingyuLightSurfaceVariant,
+    onSurfaceVariant = QingyuLightOnSurfaceVariant,
+    surfaceContainer = QingyuLightSurfaceContainer,
+    outline = QingyuLightOutline,
+    outlineVariant = QingyuLightOutlineVariant,
+    error = QingyuLightError,
+    onError = QingyuLightOnError,
+    errorContainer = QingyuLightErrorContainer,
+    onErrorContainer = QingyuLightOnErrorContainer
 )
 
+/** 提供应用统一的 Material 主题。 */
 @Composable
 fun QingyuTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    /** 是否启用系统动态取色。 */
+    dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
+    /** 当前界面使用的颜色方案。 */
     val colorScheme = when {
         dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
             val context = LocalContext.current
