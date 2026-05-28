@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="Theme.Qingyu" parent="android:Theme.Material.NoActionBar">
         <item name="android:colorAccent">@color/qingyu_primary</item>
         <item name="android:navigationBarColor">@color/qingyu_background</item>
